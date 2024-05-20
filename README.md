@@ -10,7 +10,7 @@ Our code is devided into two parts, `ISR/` for linear probing experiments and `D
 ## Linear Probing (Sec. 7.1)
 In `ISR/`
 
-**Step 1:** Download data following `ISR/README.md'
+**Step 1:** Download data following `ISR/README.md`
 
 **Step 2:** Train BERTs for MultiNLI:
 ```
