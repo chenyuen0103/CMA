@@ -10,7 +10,7 @@ Our code is devided into two parts, `ISR/` for linear probing experiments and `D
 ## Linear Probing (Sec. 7.1)
 In `ISR/`
 
-**Step 1:** Download Data following `ISR/README.md'
+**Step 1:** Download data following `ISR/README.md'
 
 **Step 2:** Train BERTs for MultiNLI:
 ```
@@ -34,3 +34,32 @@ or Evaluate CMA on CUB
 ```
 python eval.py --dataset CUB --hessian_approx_method exact
 ```
+
+
+
+## Full Fine-Tuning (Sec. 7.2)
+
+In `DomainBed/`
+
+**Step 1:** Download data following 'DomainBed/README.md`
+
+**Step 2:** Launch a sweep
+
+```
+python -m domainbed.scripts.sweep launch\
+       --data_dir=./domainbed/data/\
+       --output_dir=./domainbed/results\
+       --command_launcher multi_gpu\
+       --algorithms ERM Fishr CORAL CMA\
+       --datasets ColoredMNIST ROTATEDMNIST VLCS PACS TerraIncognita\
+       --single_test_envs\
+       --n_hparams 5\
+       --n_trials 3
+```
+
+**Step 3:** View results
+```       
+python -m domainbed.scripts.collect_results\
+       --input_dir=./domainbed/results
+```
+
