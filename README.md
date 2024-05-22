@@ -36,8 +36,8 @@ or Evaluate CMA on CUB
 ```
 python eval.py --dataset CUB --hessian_approx_method exact
 ```
-**Step 4:** Evaluate different algorithms 
-Print table with
+
+**Step 5:** Print result table
 ```
 python collect_results.py
 ```
