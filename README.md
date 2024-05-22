@@ -12,6 +12,8 @@ In `ISR/`
 
 **Step 1:** Download data following `ISR/README.md`
 
+In `ISR/real_datasets`
+
 **Step 2:** Train BERTs for MultiNLI:
 ```
 python launch_train.py
@@ -33,6 +35,11 @@ or Evaluate CMA on CUB
 
 ```
 python eval.py --dataset CUB --hessian_approx_method exact
+```
+**Step 4:** Evaluate different algorithms 
+Print table with
+```
+python collect_results.py
 ```
 
 
