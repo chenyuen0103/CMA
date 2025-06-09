@@ -1,5 +1,10 @@
 # Closed-Form Momnet Alignment (CMA)
 
+This repo contains the code and data for the paper:
+
+[**Moment Alignment: Unifying Gradient and Hessian Matching for Domain Generalization**]()(2025)
+
+*Yuen Chen, Haozhe Si, Guojun Zhang, and Han Zhao*
 
 
 Our code is devided into two parts, `ISR/` for linear probing experiments and `DomainBed/` for full fine-tuning experiments.
@@ -7,7 +12,7 @@ Our code is devided into two parts, `ISR/` for linear probing experiments and `D
 + `ISR/`: This part is built on the [code](https://github.com/Haoxiang-Wang/ISR) of [Provable Domain Generalization via Invariant-Feature Subspace Recovery](https://arxiv.org/abs/2201.12919). Please install necessary packages following their instructions.
 + `DomainBed/`: This part is built on the [code](https://github.com/facebookresearch/DomainBed) of [In Search of Lost Domain Generalization](https://arxiv.org/abs/2007.01434). Please install necessary packages following their instructions.
 
-## Linear Probing (Sec. 7.1)
+## Linear Probing
 In `ISR/`
 
 **Step 1:** Download data following `ISR/README.md`
@@ -44,7 +49,7 @@ python collect_results.py
 
 
 
-## Full Fine-Tuning (Sec. 7.2)
+## Full Fine-Tuning
 
 In `DomainBed/`
 
